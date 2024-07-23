@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+
+body {
+  background-color:var(--background-color);
+  margin: 0; 
+  padding: 0;
+  min-height: 200vh;
+  font-family: 'Source Serif 4', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Source Serif 4', serif;
+
+}
+
+:root {
+  /*Colores de Expiracion*/
+  --exp-now: hwb(0 13% 41% / 0.70 ); /* Color de expiracion pronto */
+  --exp-soon: hsla(29, 86%, 30%, 0.70);
+  --exp-med: hsla(61, 81%, 29%, 0.70);
+  --exp-late: hsla(131, 22%, 29%, 0.70);
+  --exp-really-late: hsla(131, 71%, 23%, 0.70);
+  font-family: 'Source Serif 4', serif;
+
+
+
+  /*Colores Principales*/
+  --nav-color: #4CAF50; /* Color principal */
+
+  --table-color: #592941;
+  --backtable-color: #D9D9D9;
+ 
+  --second-green: #84BD00;
+  --third-green: #269224;
+
+  --background-color: #F8FFE9; /* Color de fondo */
+  --clear-text: #FEFAE0; /* Color del texto */
+  --green-text: #283618;
+
+  --recipes: hsla(90, 49%, 62%, 0.30);
+  --green-button: #024F00;
+
+}

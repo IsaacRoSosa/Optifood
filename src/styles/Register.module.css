@@ -1,0 +1,72 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Home.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0.5px); /* Ajusta el valor para controlar la intensidad del desenfoque */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    height: 80%;
+    background-color: hsla(119, 60%, 36%, 0.80);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 6.5rem;
+    color: white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 0.3em;
+    line-height: 1;
+    margin-top: 0.1em;
+
+}
+
+.sub{
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 1px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    
+}
+
+.button{
+    margin-top: 1em;
+    padding: 0.5em 1.5em;
+    background-color: var(--green-button);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
