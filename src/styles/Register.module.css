@@ -18,8 +18,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(0.5px); /* Ajusta el valor para controlar la intensidad del desenfoque */
-    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+    filter: blur(0.5px); 
+    z-index: -1; 
 }
 
 .content {
@@ -37,6 +37,7 @@
 
 .title{
     font-size: 6.5rem;
+
     color: white;
     letter-spacing: 0.1em;
     text-align: center;
@@ -59,14 +60,58 @@
     
 }
 
-.button{
-    margin-top: 1em;
+.button {
+    margin-top: 0.2em;
     padding: 0.5em 1.5em;
     background-color: var(--green-button);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 700;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+  left: -40px;
+    width: 450px;
+    height: 70%;
+    background-image: linear-gradient(180deg, rgb(0, 255, 81), rgb(255, 255, 255));
+    animation: rotBGimg 5s linear infinite;
+    transition: all 0.2s linear;
+    z-index: 0; /* Asegúrate de que el pseudo-elemento esté detrás del contenido */
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    background: var(--green-button);
+    inset: 2px;
+    border-radius: 8px;
+    z-index: 1; /* Asegúrate de que este pseudo-elemento esté encima del gradiente pero debajo del texto */
+}
+
+
+.button:hover {
+    scale: 1.1;
+}
+
+.button span {
+    position: relative;
+    z-index: 2; /* Asegúrate de que el texto esté encima de todo */
 }
