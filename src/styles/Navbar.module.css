@@ -24,7 +24,6 @@
   
   .navbar_nav {
     list-style-type: none;
-
     display: flex;
     gap: 2rem;
     align-items: center;

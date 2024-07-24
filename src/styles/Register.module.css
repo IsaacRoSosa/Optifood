@@ -6,7 +6,7 @@
     height: 120vh;
     width: 100%;
     overflow: hidden;
-}
+} 
 
 .background {
     position: absolute;
@@ -26,7 +26,8 @@
     position: relative;
     z-index: 1;
     width: 80%;
-    height: 80%;
+    min-height: 80%;
+    height: fit-content;
     background-color: hsla(119, 60%, 36%, 0.80);
     border-radius: 25px;
     display: flex;
@@ -37,7 +38,6 @@
 
 .title{
     font-size: 6.5rem;
-
     color: white;
     letter-spacing: 0.1em;
     text-align: center;
@@ -46,8 +46,21 @@
     margin-bottom: 0.3em;
     line-height: 1;
     margin-top: 0.1em;
-
 }
+
+
+.title2{
+    font-size: 3.5rem;
+    color: white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 0.3em;
+    line-height: 1;
+    margin-top: 0.1em;
+}
+
 
 .sub{
     font-size: 2.5rem;
@@ -114,4 +127,56 @@
 .button span {
     position: relative;
     z-index: 2; /* Asegúrate de que el texto esté encima de todo */
+}
+
+.preferences {
+    background-color: var(--backtable-color);
+    border-radius: 15px;
+    margin-top: 10px;
+   
+}
+  
+  .LogoContainer{
+    background-color: var(--second-green);
+    border-radius: 15%;
+    margin-bottom: 2%;
+  }
+
+  .preferences label{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--table-color);
+    width: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+   
+  }
+
+  .checkbox{
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    margin-left: 30px;
+    border-radius: 50%;
+    
+}
+
+.optionText {
+    flex-grow: 1;
+    text-align: left;
+}
+
+
+.optionss{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
