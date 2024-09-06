@@ -48,7 +48,6 @@
     margin-top: 0.1em;
 }
 
-
 .title2{
     font-size: 3.5rem;
     color: white;
@@ -133,6 +132,9 @@
     background-color: var(--backtable-color);
     border-radius: 15px;
     margin-top: 10px;
+    width: 40vh;
+
+    justify-self: center;
    
 }
   
@@ -144,10 +146,10 @@
 
   .preferences label{
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     font-weight: 700;
     background-color: var(--table-color);
-    width: 30vh;
+    width: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +163,6 @@
     border: 2px solid white;
     margin-left: 30px;
     border-radius: 50%;
-    
 }
 
 .optionText {
@@ -177,6 +178,48 @@
     width: 80%;
     margin-top: 5px;
     margin-bottom: 8px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 500;
+}
+
+.formContent{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.submitBut{
+    margin-top: 30px;
+    padding: 0.5em 1.5em;
+    background-color: var(--green-button);
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 40vh;
+    justify-self: center;
+}
+
+.submitBut:hover {
+    scale: 1.1;
+}
+
+/* Estilos para el contenedor del menú desplegable */
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Estilos para cuando el menú está visible */
+.dropdown-content.show {
+    max-height: 500px; /* Ajusta este valor según el contenido */
+    opacity: 10;
 }

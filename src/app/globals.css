@@ -13,7 +13,6 @@ body {
 html {
   scroll-behavior: smooth;
   font-family: 'Source Serif 4', serif;
-
 }
 
 :root {
@@ -25,7 +24,7 @@ html {
   --exp-really-late: hsla(131, 71%, 23%, 0.70);
   font-family: 'Source Serif 4', serif;
 
-
+ 
 
   /*Colores Principales*/
   --nav-color: #4CAF50; /* Color principal */

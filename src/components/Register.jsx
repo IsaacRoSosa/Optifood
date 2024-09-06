@@ -61,6 +61,7 @@ function Register() {
         // Opcionalmente, cierra el otro menú desplegable cuando uno se abre
         setShowDietDropdown(false);
         setShowPreferencesDropdown(false);
+        setShowEquipmentDropdown(false);
     };
 
     const toggleDietDropdown = () => {
@@ -68,6 +69,7 @@ function Register() {
         // Opcionalmente, cierra el otro menú desplegable cuando uno se abre
         setShowAllergiesDropdown(false);
         setShowPreferencesDropdown(false);
+        setShowEquipmentDropdown(false);
     };
 
     const togglePreferencesDropdown = () => {
@@ -75,6 +77,7 @@ function Register() {
         // Opcionalmente, cierra el otro menú desplegable cuando uno se abre
         setShowDietDropdown(false);
         setShowAllergiesDropdown(false);
+        setShowEquipmentDropdown(false);
     }
 
     const toggleEquipmentDropdown = () => {
@@ -100,9 +103,12 @@ function Register() {
             ) : (
                 <div className={styles.content}>
                     <h1 className={styles.title2}>FILL OUT THE FORM :] </h1>
+                    <h2 className={styles.sub}>You can edit it later</h2>
                     <div className={styles.LogoContainer}>
                         <Image src="/pfp.webp" alt="logo" width={125} height={125} />
                     </div>
+
+            <div className={styles.formContent}>
 
                     <div className={styles.preferences}>
                             <label onClick={() => toggleAllergiesDropdown(!showDropdown)}>Allergies</label>
@@ -173,8 +179,34 @@ function Register() {
                         
                     </div>
 
+                        
 
-                    <button onClick={handleSubmitBoton} type="submit">Submit</button>
+                    <div className={styles.preferences}>
+                            <label onClick={() => toggleEquipmentDropdown(showEquipmentDropdown)}>Cooking Stations</label>
+                            {showEquipmentDropdown && (
+                                <div >
+                                    {['Nuts', 'Gluten', 'Dairy', 'Shellfish'].map((equipment, index, array) => (
+                                        <div
+                                            key={equipment}
+                                            className={styles.optionss}
+                                            onClick={() => handleSelectCookingEquipment(equipment)}
+                                        >
+                                            <div className={styles.checkbox}
+                                                style={{   
+                                                    backgroundColor: selectedCookingEquipment.includes(equipment) ? '#592941' : 'transparent',
+                                                }}
+                                            ></div>
+                                            {equipment}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        
+                    </div>
+            </div>    
+                    <button className={styles.submitBut} onClick={handleSubmitBoton} type="submit">Submit</button>
+
+
            
                    
                 </div>
